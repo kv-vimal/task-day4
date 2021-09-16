@@ -1,0 +1,490 @@
+Use the same rest countries and print all countries name, region, sub region and population
+---------------------------------------------------------------------------------------------
+REGION NAME
+-------------
+var xhr= new XMLHttpRequest();
+xhr.onload=function(){
+    if(xhr.status>=200&&xhr.status<=400){
+       var t= JSON.parse(this.response)
+       for(let country of t){
+            console.log(country.region)
+       }
+        
+    }else{
+        console.log(xhr.responseText)
+    }
+};
+
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.send();
+
+output:
+
+script.js:6 Asia
+2script.js:6 Europe
+script.js:6 Africa
+script.js:6 Oceania
+script.js:6 Europe
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Polar
+2script.js:6 Americas
+script.js:6 Asia
+script.js:6 Americas
+script.js:6 Oceania
+script.js:6 Europe
+script.js:6 Asia
+script.js:6 Americas
+2script.js:6 Asia
+script.js:6 Americas
+2script.js:6 Europe
+script.js:6 Americas
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Asia
+2script.js:6 Americas
+script.js:6 Europe
+script.js:6 Africa
+script.js:6 
+script.js:6 Americas
+script.js:6 Africa
+3script.js:6 Americas
+script.js:6 Asia
+script.js:6 Europe
+2script.js:6 Africa
+script.js:6 Asia
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Africa
+script.js:6 Americas
+2script.js:6 Africa
+script.js:6 Americas
+script.js:6 Asia
+2script.js:6 Oceania
+script.js:6 Americas
+3script.js:6 Africa
+script.js:6 Oceania
+script.js:6 Americas
+script.js:6 Europe
+2script.js:6 Americas
+3script.js:6 Europe
+script.js:6 Africa
+3script.js:6 Americas
+script.js:6 Africa
+script.js:6 Americas
+2script.js:6 Africa
+script.js:6 Europe
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Europe
+script.js:6 Oceania
+2script.js:6 Europe
+script.js:6 Americas
+script.js:6 Oceania
+3script.js:6 Africa
+script.js:6 Asia
+script.js:6 Europe
+script.js:6 Africa
+2script.js:6 Europe
+3script.js:6 Americas
+script.js:6 Oceania
+script.js:6 Americas
+script.js:6 Europe
+2script.js:6 Africa
+2script.js:6 Americas
+script.js:6 
+script.js:6 Europe
+script.js:6 Americas
+script.js:6 Asia
+2script.js:6 Europe
+2script.js:6 Asia
+script.js:6 Africa
+2script.js:6 Asia
+2script.js:6 Europe
+script.js:6 Asia
+script.js:6 Europe
+script.js:6 Americas
+script.js:6 Asia
+script.js:6 Europe
+2script.js:6 Asia
+script.js:6 Africa
+script.js:6 Oceania
+3script.js:6 Asia
+script.js:6 Europe
+script.js:6 Asia
+3script.js:6 Africa
+3script.js:6 Europe
+script.js:6 Asia
+script.js:6 Europe
+2script.js:6 Africa
+2script.js:6 Asia
+script.js:6 Africa
+script.js:6 Europe
+script.js:6 Oceania
+script.js:6 Americas
+3script.js:6 Africa
+script.js:6 Americas
+script.js:6 Oceania
+2script.js:6 Europe
+script.js:6 Asia
+script.js:6 Europe
+script.js:6 Americas
+2script.js:6 Africa
+script.js:6 Asia
+script.js:6 Africa
+script.js:6 Oceania
+script.js:6 Asia
+script.js:6 Europe
+2script.js:6 Oceania
+script.js:6 Americas
+2script.js:6 Africa
+2script.js:6 Oceania
+script.js:6 Asia
+script.js:6 Oceania
+script.js:6 Europe
+2script.js:6 Asia
+script.js:6 Oceania
+script.js:6 Asia
+script.js:6 Americas
+script.js:6 Oceania
+2script.js:6 Americas
+script.js:6 Asia
+script.js:6 Oceania
+2script.js:6 Europe
+script.js:6 Americas
+script.js:6 Asia
+script.js:6 Europe
+script.js:6 Africa
+2script.js:6 Europe
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Africa
+5script.js:6 Americas
+script.js:6 Oceania
+script.js:6 Europe
+script.js:6 Africa
+script.js:6 Asia
+script.js:6 Africa
+script.js:6 Europe
+2script.js:6 Africa
+script.js:6 Asia
+script.js:6 Americas
+2script.js:6 Europe
+script.js:6 Oceania
+2script.js:6 Africa
+script.js:6 Americas
+script.js:6 Asia
+script.js:6 Africa
+script.js:6 Europe
+script.js:6 Asia
+script.js:6 Africa
+script.js:6 Americas
+script.js:6 Europe
+script.js:6 Africa
+2script.js:6 Europe
+3script.js:6 Asia
+script.js:6 Africa
+2script.js:6 Asia
+script.js:6 Africa
+2script.js:6 Oceania
+script.js:6 Americas
+script.js:6 Africa
+2script.js:6 Asia
+script.js:6 Americas
+script.js:6 Oceania
+script.js:6 Africa
+script.js:6 Europe
+script.js:6 Asia
+script.js:6 Europe
+2script.js:6 Americas
+script.js:6 Asia
+script.js:6 Oceania
+script.js:6 Americas
+script.js:6 Asia
+script.js:6 Oceania
+script.js:6 Africa
+script.js:6 Asia
+2script.js:6 Africa
+
+-----------------------------------------------------------------------------------------------------------
+countries name 
+----------------
+
+
+var xhr= new XMLHttpRequest();
+xhr.onload=function(){
+    if(xhr.status>=200&&xhr.status<=400){
+       var t= JSON.parse(this.response)
+       for(let country of t){
+            console.log(country.name)
+       }
+        
+    }else{
+        console.log(xhr.responseText)
+    }
+};
+
+xhr.open("GET", "https://restcountries.eu/rest/v2/all");
+xhr.send();
+
+
+
+
+
+output : 
+
+Afghanistan
+script.js:6 Åland Islands
+script.js:6 Albania
+script.js:6 Algeria
+script.js:6 American Samoa
+script.js:6 Andorra
+script.js:6 Angola
+script.js:6 Anguilla
+script.js:6 Antarctica
+script.js:6 Antigua and Barbuda
+script.js:6 Argentina
+script.js:6 Armenia
+script.js:6 Aruba
+script.js:6 Australia
+script.js:6 Austria
+script.js:6 Azerbaijan
+script.js:6 Bahamas
+script.js:6 Bahrain
+script.js:6 Bangladesh
+script.js:6 Barbados
+script.js:6 Belarus
+script.js:6 Belgium
+script.js:6 Belize
+script.js:6 Benin
+script.js:6 Bermuda
+script.js:6 Bhutan
+script.js:6 Bolivia (Plurinational State of)
+script.js:6 Bonaire, Sint Eustatius and Saba
+script.js:6 Bosnia and Herzegovina
+script.js:6 Botswana
+script.js:6 Bouvet Island
+script.js:6 Brazil
+script.js:6 British Indian Ocean Territory
+script.js:6 United States Minor Outlying Islands
+script.js:6 Virgin Islands (British)
+script.js:6 Virgin Islands (U.S.)
+script.js:6 Brunei Darussalam
+script.js:6 Bulgaria
+script.js:6 Burkina Faso
+script.js:6 Burundi
+script.js:6 Cambodia
+script.js:6 Cameroon
+script.js:6 Canada
+script.js:6 Cabo Verde
+script.js:6 Cayman Islands
+script.js:6 Central African Republic
+script.js:6 Chad
+script.js:6 Chile
+script.js:6 China
+script.js:6 Christmas Island
+script.js:6 Cocos (Keeling) Islands
+script.js:6 Colombia
+script.js:6 Comoros
+script.js:6 Congo
+script.js:6 Congo (Democratic Republic of the)
+script.js:6 Cook Islands
+script.js:6 Costa Rica
+script.js:6 Croatia
+script.js:6 Cuba
+script.js:6 Curaçao
+script.js:6 Cyprus
+script.js:6 Czech Republic
+script.js:6 Denmark
+script.js:6 Djibouti
+script.js:6 Dominica
+script.js:6 Dominican Republic
+script.js:6 Ecuador
+script.js:6 Egypt
+script.js:6 El Salvador
+script.js:6 Equatorial Guinea
+script.js:6 Eritrea
+script.js:6 Estonia
+script.js:6 Ethiopia
+script.js:6 Falkland Islands (Malvinas)
+script.js:6 Faroe Islands
+script.js:6 Fiji
+script.js:6 Finland
+script.js:6 France
+script.js:6 French Guiana
+script.js:6 French Polynesia
+script.js:6 French Southern Territories
+script.js:6 Gabon
+script.js:6 Gambia
+script.js:6 Georgia
+script.js:6 Germany
+script.js:6 Ghana
+script.js:6 Gibraltar
+script.js:6 Greece
+script.js:6 Greenland
+script.js:6 Grenada
+script.js:6 Guadeloupe
+script.js:6 Guam
+script.js:6 Guatemala
+script.js:6 Guernsey
+script.js:6 Guinea
+script.js:6 Guinea-Bissau
+script.js:6 Guyana
+script.js:6 Haiti
+script.js:6 Heard Island and McDonald Islands
+script.js:6 Holy See
+script.js:6 Honduras
+script.js:6 Hong Kong
+script.js:6 Hungary
+script.js:6 Iceland
+script.js:6 India
+script.js:6 Indonesia
+script.js:6 Côte d'Ivoire
+script.js:6 Iran (Islamic Republic of)
+script.js:6 Iraq
+script.js:6 Ireland
+script.js:6 Isle of Man
+script.js:6 Israel
+script.js:6 Italy
+script.js:6 Jamaica
+script.js:6 Japan
+script.js:6 Jersey
+script.js:6 Jordan
+script.js:6 Kazakhstan
+script.js:6 Kenya
+script.js:6 Kiribati
+script.js:6 Kuwait
+script.js:6 Kyrgyzstan
+script.js:6 Lao People's Democratic Republic
+script.js:6 Latvia
+script.js:6 Lebanon
+script.js:6 Lesotho
+script.js:6 Liberia
+script.js:6 Libya
+script.js:6 Liechtenstein
+script.js:6 Lithuania
+script.js:6 Luxembourg
+script.js:6 Macao
+script.js:6 Macedonia (the former Yugoslav Republic of)
+script.js:6 Madagascar
+script.js:6 Malawi
+script.js:6 Malaysia
+script.js:6 Maldives
+script.js:6 Mali
+script.js:6 Malta
+script.js:6 Marshall Islands
+script.js:6 Martinique
+script.js:6 Mauritania
+script.js:6 Mauritius
+script.js:6 Mayotte
+script.js:6 Mexico
+script.js:6 Micronesia (Federated States of)
+script.js:6 Moldova (Republic of)
+script.js:6 Monaco
+script.js:6 Mongolia
+script.js:6 Montenegro
+script.js:6 Montserrat
+script.js:6 Morocco
+script.js:6 Mozambique
+script.js:6 Myanmar
+script.js:6 Namibia
+script.js:6 Nauru
+script.js:6 Nepal
+script.js:6 Netherlands
+script.js:6 New Caledonia
+script.js:6 New Zealand
+script.js:6 Nicaragua
+script.js:6 Niger
+script.js:6 Nigeria
+script.js:6 Niue
+script.js:6 Norfolk Island
+script.js:6 Korea (Democratic People's Republic of)
+script.js:6 Northern Mariana Islands
+script.js:6 Norway
+script.js:6 Oman
+script.js:6 Pakistan
+script.js:6 Palau
+script.js:6 Palestine, State of
+script.js:6 Panama
+script.js:6 Papua New Guinea
+script.js:6 Paraguay
+script.js:6 Peru
+script.js:6 Philippines
+script.js:6 Pitcairn
+script.js:6 Poland
+script.js:6 Portugal
+script.js:6 Puerto Rico
+script.js:6 Qatar
+script.js:6 Republic of Kosovo
+script.js:6 Réunion
+script.js:6 Romania
+script.js:6 Russian Federation
+script.js:6 Rwanda
+script.js:6 Saint Barthélemy
+script.js:6 Saint Helena, Ascension and Tristan da Cunha
+script.js:6 Saint Kitts and Nevis
+script.js:6 Saint Lucia
+script.js:6 Saint Martin (French part)
+script.js:6 Saint Pierre and Miquelon
+script.js:6 Saint Vincent and the Grenadines
+script.js:6 Samoa
+script.js:6 San Marino
+script.js:6 Sao Tome and Principe
+script.js:6 Saudi Arabia
+script.js:6 Senegal
+script.js:6 Serbia
+script.js:6 Seychelles
+script.js:6 Sierra Leone
+script.js:6 Singapore
+script.js:6 Sint Maarten (Dutch part)
+script.js:6 Slovakia
+script.js:6 Slovenia
+script.js:6 Solomon Islands
+script.js:6 Somalia
+script.js:6 South Africa
+script.js:6 South Georgia and the South Sandwich Islands
+script.js:6 Korea (Republic of)
+script.js:6 South Sudan
+script.js:6 Spain
+script.js:6 Sri Lanka
+script.js:6 Sudan
+script.js:6 Suriname
+script.js:6 Svalbard and Jan Mayen
+script.js:6 Swaziland
+script.js:6 Sweden
+script.js:6 Switzerland
+script.js:6 Syrian Arab Republic
+script.js:6 Taiwan
+script.js:6 Tajikistan
+script.js:6 Tanzania, United Republic of
+script.js:6 Thailand
+script.js:6 Timor-Leste
+script.js:6 Togo
+script.js:6 Tokelau
+script.js:6 Tonga
+script.js:6 Trinidad and Tobago
+script.js:6 Tunisia
+script.js:6 Turkey
+script.js:6 Turkmenistan
+script.js:6 Turks and Caicos Islands
+script.js:6 Tuvalu
+script.js:6 Uganda
+script.js:6 Ukraine
+script.js:6 United Arab Emirates
+script.js:6 United Kingdom of Great Britain and Northern Ireland
+script.js:6 United States of America
+script.js:6 Uruguay
+script.js:6 Uzbekistan
+script.js:6 Vanuatu
+script.js:6 Venezuela (Bolivarian Republic of)
+script.js:6 Viet Nam
+script.js:6 Wallis and Futuna
+script.js:6 Western Sahara
+script.js:6 Yemen
+script.js:6 Zambia
+script.js:6 Zimbabwe
+
+------------------------------------------------------------------------
+
+
+
